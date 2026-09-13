@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dtl84o8h21ugg"]
+
+[ext_resource type="Script" uid="uid://c4ibidp8ibhju" path="res://Scripts/section_1.gd" id="1_j2q8x"]
+[ext_resource type="Script" uid="uid://pbs6e0woyfnn" path="res://Scripts/section_2.gd" id="2_112p8"]
+[ext_resource type="Script" uid="uid://dwojicdusl0n0" path="res://Scripts/section_3.gd" id="3_112p8"]
+[ext_resource type="Script" uid="uid://c0ttdem4gi5vu" path="res://Scripts/linear_recursion.gd" id="4_e2u21"]
+
+[node name="Node" type="Node" unique_id=555045452]
+
+[node name="Section 1" type="Node" parent="." unique_id=1807445274]
+script = ExtResource("1_j2q8x")
+
+[node name="Section 2" type="Node" parent="." unique_id=135507822]
+script = ExtResource("2_112p8")
+
+[node name="Section 3" type="Node" parent="." unique_id=672835610]
+script = ExtResource("3_112p8")
+
+[node name="Extra Challenge - Recursion" type="Node" parent="." unique_id=988736947]
+script = ExtResource("4_e2u21")
