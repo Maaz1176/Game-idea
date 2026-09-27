@@ -1,0 +1,17 @@
+BUGS AND IMPROVEMENTS
+
+Known Bugs:
+The star can sometimes move very fast after getting a high score.
+The star may sometimes bounce at an unexpected angle.
+The game currently uses simple shapes instead of detailed graphics.
+
+Possible Improvements:
+Make the star a real round shape.
+Add sound effects when the star hits the paddle.
+Add background music.
+Add different difficulty levels.
+Add a high-score system.
+Add better animations and graphics.
+Add a start menu.
+Add a pause button.
+Add more challenging levels.
