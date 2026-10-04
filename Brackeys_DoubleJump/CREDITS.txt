@@ -1,0 +1,8 @@
+Base game and tutorial: Brackeys.
+https://github.com/Brackeys/first-game-in-godot
+https://www.youtube.com/watch?v=LOhfqjmasi0
+Sprites: tutorial bundle by Brackeys, using assets from Anokolisa (as credited in the tutorial).
+Music: Time for Adventure by Sofia Thirslund (tutorial bundle).
+Fonts, sounds, scenes and other bundled resources are retained from the official tutorial project.
+Upstream README states everything is free to use, including commercially (public domain); upstream LICENSE is retained.
+Added double-jump mechanic, HUD and explanation: AI-assisted extension prepared for this assignment.

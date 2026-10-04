@@ -1,0 +1,7 @@
+TUTORIAL EXTENSION: DOUBLE JUMP + JUMP HUD
+
+WHAT WAS ADDED
+The tutorial player can only jump from the floor. This extension allows
+one additional jump in midair. A screen-fixed HUD displays the number
+of available jumps and the current coin count. The knight briefly flashes
+cyan when the air jump is used. Press R to restart.
