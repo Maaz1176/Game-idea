@@ -1,0 +1,360 @@
+[gd_scene format=3 uid="uid://dqmabllidll7h"]
+
+[ext_resource type="Script" uid="uid://biyiqhr3b0gua" path="res://scripts/main.gd" id="1_script"]
+[ext_resource type="Theme" path="res://theme/game_theme.tres" id="1_theme"]
+
+[node name="Main" type="Control" unique_id=1445725552]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("1_theme")
+script = ExtResource("1_script")
+
+[node name="Backdrop" type="ColorRect" parent="." unique_id=1543241157]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.046, 0.068, 0.101, 1)
+
+[node name="Frame" type="MarginContainer" parent="." unique_id=988193390]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 22
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 22
+theme_override_constants/margin_bottom = 16
+
+[node name="MainStack" type="VBoxContainer" parent="Frame" unique_id=431293536]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 12
+
+[node name="Header" type="HBoxContainer" parent="Frame/MainStack" unique_id=37676031]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HeaderLeft" type="VBoxContainer" parent="Frame/MainStack/Header" unique_id=553575813]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Headline" type="Label" parent="Frame/MainStack/Header/HeaderLeft" unique_id=2060774815]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.91, 0.77, 1)
+theme_override_font_sizes/font_size = 22
+text = "WAYFINDER  /  INTERFACE FIELD TEST"
+
+[node name="Subhead" type="Label" parent="Frame/MainStack/Header/HeaderLeft" unique_id=881042984]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.66, 0.76, 0.79, 1)
+theme_override_font_sizes/font_size = 13
+text = "Stamina · Hotbar · Quest log   |   Keyboard-first Godot UI"
+
+[node name="SaveButton" type="Button" parent="Frame/MainStack/Header" unique_id=792252377]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 42)
+layout_mode = 2
+text = "SAVE  [F5]"
+
+[node name="LoadButton" type="Button" parent="Frame/MainStack/Header" unique_id=1571318469]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 42)
+layout_mode = 2
+text = "LOAD  [F9]"
+
+[node name="Panels" type="HBoxContainer" parent="Frame/MainStack" unique_id=2006221617]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 14
+
+[node name="StaminaPanel" type="PanelContainer" parent="Frame/MainStack/Panels" unique_id=555679226]
+custom_minimum_size = Vector2(300, 240)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StaminaMargin" type="MarginContainer" parent="Frame/MainStack/Panels/StaminaPanel" unique_id=166244978]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 13
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 14
+
+[node name="StaminaContent" type="VBoxContainer" parent="Frame/MainStack/Panels/StaminaPanel/StaminaMargin" unique_id=614134835]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="StaminaHead" type="HBoxContainer" parent="Frame/MainStack/Panels/StaminaPanel/StaminaMargin/StaminaContent" unique_id=857864287]
+layout_mode = 2
+
+[node name="StaminaHeading" type="Label" parent="Frame/MainStack/Panels/StaminaPanel/StaminaMargin/StaminaContent/StaminaHead" unique_id=2081850724]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.3, 0.91, 0.77, 1)
+text = "01  /  STAMINA"
+
+[node name="StaminaValue" type="Label" parent="Frame/MainStack/Panels/StaminaPanel/StaminaMargin/StaminaContent/StaminaHead" unique_id=141461172]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "65 / 100"
+
+[node name="StaminaBar" type="ProgressBar" parent="Frame/MainStack/Panels/StaminaPanel/StaminaMargin/StaminaContent" unique_id=1367503237]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+mouse_filter = 2
+value = 65.0
+show_percentage = false
+
+[node name="StaminaHelp" type="Label" parent="Frame/MainStack/Panels/StaminaPanel/StaminaMargin/StaminaContent" unique_id=960019466]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.81, 0.83, 1)
+theme_override_font_sizes/font_size = 13
+text = "Steady. Energy available."
+autowrap_mode = 3
+
+[node name="StaminaActions" type="HBoxContainer" parent="Frame/MainStack/Panels/StaminaPanel/StaminaMargin/StaminaContent" unique_id=331798170]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="SprintButton" type="Button" parent="Frame/MainStack/Panels/StaminaPanel/StaminaMargin/StaminaContent/StaminaActions" unique_id=1485621873]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SPRINT  -20"
+
+[node name="RecoverButton" type="Button" parent="Frame/MainStack/Panels/StaminaPanel/StaminaMargin/StaminaContent/StaminaActions" unique_id=1367064940]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "RECOVER  +25"
+
+[node name="StaminaFoot" type="Label" parent="Frame/MainStack/Panels/StaminaPanel/StaminaMargin/StaminaContent" unique_id=380488281]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.57, 0.68, 0.72, 1)
+theme_override_font_sizes/font_size = 12
+text = "Use Tab / arrows, Enter to activate"
+
+[node name="QuestPanel" type="PanelContainer" parent="Frame/MainStack/Panels" unique_id=1705090624]
+custom_minimum_size = Vector2(340, 240)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="QuestMargin" type="MarginContainer" parent="Frame/MainStack/Panels/QuestPanel" unique_id=224309685]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 13
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 12
+
+[node name="QuestContent" type="VBoxContainer" parent="Frame/MainStack/Panels/QuestPanel/QuestMargin" unique_id=723602787]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="QuestHeadingRow" type="HBoxContainer" parent="Frame/MainStack/Panels/QuestPanel/QuestMargin/QuestContent" unique_id=131571200]
+layout_mode = 2
+
+[node name="QuestHeading" type="Label" parent="Frame/MainStack/Panels/QuestPanel/QuestMargin/QuestContent/QuestHeadingRow" unique_id=437904139]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.3, 0.91, 0.77, 1)
+text = "02  /  QUEST LOG"
+
+[node name="QuestCount" type="Label" parent="Frame/MainStack/Panels/QuestPanel/QuestMargin/QuestContent/QuestHeadingRow" unique_id=1385818747]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.66, 0.78, 0.82, 1)
+text = "2 / 5"
+
+[node name="QuestScroll" type="ScrollContainer" parent="Frame/MainStack/Panels/QuestPanel/QuestMargin/QuestContent" unique_id=545917349]
+custom_minimum_size = Vector2(0, 89)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="QuestList" type="VBoxContainer" parent="Frame/MainStack/Panels/QuestPanel/QuestMargin/QuestContent/QuestScroll" unique_id=1724857201]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 5
+
+[node name="QuestDetail" type="Label" parent="Frame/MainStack/Panels/QuestPanel/QuestMargin/QuestContent" unique_id=1571036205]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.71, 0.83, 0.85, 1)
+theme_override_font_sizes/font_size = 12
+text = "Select a quest to see its summary."
+autowrap_mode = 3
+max_lines_visible = 2
+
+[node name="QuestActions" type="HBoxContainer" parent="Frame/MainStack/Panels/QuestPanel/QuestMargin/QuestContent" unique_id=1025709611]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="AddQuest" type="Button" parent="Frame/MainStack/Panels/QuestPanel/QuestMargin/QuestContent/QuestActions" unique_id=230832213]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ADD QUEST"
+
+[node name="RemoveQuest" type="Button" parent="Frame/MainStack/Panels/QuestPanel/QuestMargin/QuestContent/QuestActions" unique_id=1209461105]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "REMOVE"
+
+[node name="FullQuest" type="Button" parent="Frame/MainStack/Panels/QuestPanel/QuestMargin/QuestContent/QuestActions" unique_id=1808393158]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "READ FULL"
+
+[node name="HotbarPanel" type="PanelContainer" parent="Frame/MainStack" unique_id=287411349]
+layout_mode = 2
+
+[node name="HotbarMargin" type="MarginContainer" parent="Frame/MainStack/HotbarPanel" unique_id=1171307296]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 10
+
+[node name="HotbarContent" type="VBoxContainer" parent="Frame/MainStack/HotbarPanel/HotbarMargin" unique_id=639045155]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HotbarHeading" type="HBoxContainer" parent="Frame/MainStack/HotbarPanel/HotbarMargin/HotbarContent" unique_id=1935445514]
+layout_mode = 2
+
+[node name="HotbarTitle" type="Label" parent="Frame/MainStack/HotbarPanel/HotbarMargin/HotbarContent/HotbarHeading" unique_id=1417097843]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.3, 0.91, 0.77, 1)
+text = "03  /  HOTBAR"
+
+[node name="HotbarHint" type="Label" parent="Frame/MainStack/HotbarPanel/HotbarMargin/HotbarContent/HotbarHeading" unique_id=2063008382]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.66, 0.76, 0.79, 1)
+theme_override_font_sizes/font_size = 12
+text = "1–5 SELECT  ·  E USE  ·  C CYCLE  ·  BACKSPACE CLEAR"
+
+[node name="HotbarSlots" type="HBoxContainer" parent="Frame/MainStack/HotbarPanel/HotbarMargin/HotbarContent" unique_id=255274925]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="Slot0" type="Button" parent="Frame/MainStack/HotbarPanel/HotbarMargin/HotbarContent/HotbarSlots" unique_id=74893328]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(106, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "1"
+clip_text = true
+
+[node name="Slot1" type="Button" parent="Frame/MainStack/HotbarPanel/HotbarMargin/HotbarContent/HotbarSlots" unique_id=316179275]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(106, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "2"
+clip_text = true
+
+[node name="Slot2" type="Button" parent="Frame/MainStack/HotbarPanel/HotbarMargin/HotbarContent/HotbarSlots" unique_id=2005597021]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(106, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "3"
+clip_text = true
+
+[node name="Slot3" type="Button" parent="Frame/MainStack/HotbarPanel/HotbarMargin/HotbarContent/HotbarSlots" unique_id=919554689]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(106, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "4"
+clip_text = true
+
+[node name="Slot4" type="Button" parent="Frame/MainStack/HotbarPanel/HotbarMargin/HotbarContent/HotbarSlots" unique_id=2088433140]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(106, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "5"
+clip_text = true
+
+[node name="HotbarActions" type="HBoxContainer" parent="Frame/MainStack/HotbarPanel/HotbarMargin/HotbarContent" unique_id=192774438]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="UseItem" type="Button" parent="Frame/MainStack/HotbarPanel/HotbarMargin/HotbarContent/HotbarActions" unique_id=571847949]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "USE [E]"
+
+[node name="CycleItem" type="Button" parent="Frame/MainStack/HotbarPanel/HotbarMargin/HotbarContent/HotbarActions" unique_id=27726885]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "CYCLE [C]"
+
+[node name="ClearItem" type="Button" parent="Frame/MainStack/HotbarPanel/HotbarMargin/HotbarContent/HotbarActions" unique_id=1797088646]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "CLEAR [BACKSPACE]"
+
+[node name="Footer" type="HBoxContainer" parent="Frame/MainStack" unique_id=1201021244]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Feedback" type="Label" parent="Frame/MainStack/Footer" unique_id=291015841]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.71, 0.87, 0.91, 1)
+theme_override_font_sizes/font_size = 13
+text = "READY  /  Navigate with keyboard or mouse."
+autowrap_mode = 3
+
+[node name="Keys" type="Label" parent="Frame/MainStack/Footer" unique_id=1751611954]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.59, 0.7, 0.74, 1)
+theme_override_font_sizes/font_size = 12
+text = "J QUESTS   ·   F5 SAVE   ·   F9 LOAD"
+
+[node name="QuestDetailsDialog" type="AcceptDialog" parent="." unique_id=1320509209]
+unique_name_in_owner = true
+title = "QUEST DETAILS"
+initial_position = 1
+theme = ExtResource("1_theme")
+ok_button_text = "CLOSE"
